@@ -1,30 +1,3 @@
-// #include <stdio.h>
-// #include <string.h>
-// #include "account.h"
-// #include "utils.h"
-// #include "data.h"
-
-// void someFunction() {
-//     Account rec;
-//     rec.accountNumber = 12345;
-//     strcpy(rec.name, "John Doe");
-//     strcpy(rec.user_id, "john123");
-//     strcpy(rec.address, "123 Main Street");
-//     strcpy(rec.phone, "555-1234");
-//     strcpy(rec.email, "john@example.com");
-//     strcpy(rec.dob, "1990-01-01");
-//     rec.balance = 1000.50f;
-
-//     FILE *f = fopen("record.bin", "ab");
-//     if (f == NULL) {
-//         perror("Failed to open file");
-//         return;
-//     }
-    
-//     fwrite(&rec, sizeof(rec), 1, f);
-//     fclose(f);
-// }
-
 
 #include <stdio.h>
 #include <string.h>
@@ -37,7 +10,7 @@ void add_account() {
     scanf("%d", &newAccount.accountNumber);
 
     printf("Enter name: ");
-    getchar();  // to consume leftover newline
+    getchar(); 
     fgets(newAccount.name, sizeof(newAccount.name), stdin);
     newAccount.name[strcspn(newAccount.name, "\n")] = 0;  // remove trailing newline
 

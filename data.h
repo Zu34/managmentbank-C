@@ -3,7 +3,7 @@
 
 #include "account.h"
 
-int find_record(int account_no, struct record *rec);
-int update_record(int account_no, struct record new_rec);
+int find_record(int account_no, Account *rec);
+int update_record(int account_no, Account new_rec);
 
 #endif
